@@ -22,11 +22,6 @@ To reflect:
 - Academic & co-curricular activities
 - Technical and communication skills
 - Integration of tech with community service
-
-## 🚀 Live Site
-
-👉 [View it on GitHub Pages](https://muaz67.github.io/E-Portfolio-Website/)
-
 ---
 
 ✨ *Created with passion for tech & service by Muazzam Bin Ester*
