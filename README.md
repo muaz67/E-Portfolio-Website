@@ -1,6 +1,6 @@
 # 🌐 Muazzam Bin Ester | E-Portfolio
 
-Welcome to my personal e-Portfolio website! This is part of my **Web Engineering assignment** at **Universiti Utara Malaysia (UUM)**.
+This is a personal E-Portfolio website developed for **STIWK2124 Web Engineering** (Assignment 1). It highlights my academic, co-curricular, and project experiences as a final-year IT student at **Universiti Utara Malaysia (UUM)**.
 
 ## 🔍 Overview
 
