@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lifestyle | Muazzam's E-Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>My Lifestyle</h1>
+    <p class="headline">Tech Enthusiast 💻 | Food Explorer 🍜 | Curious Traveler ✈️</p>
+    <nav>
+        <a href="index.html">Profile</a>
+        <a href="lifestyle.html">Lifestyle</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+</header>
+
+<main class="lifestyle">
+
+    <!-- Cards -->
+    <div class="card-grid">
+        <div class="card">
+            <img src="../images/tech.jpg" alt="Tech">
+            <h4>Tech Tools</h4>
+            <p>Using AI + PHP to solve problems through web apps.</p>
+        </div>
+        <div class="card">
+            <img src="../images/food.jpg" alt="Food">
+            <h4>Food Trips</h4>
+            <p>From sambal hijau to Nasi Kandar in Perlis 😋</p>
+        </div>
+        <div class="card">
+            <img src="../images/travel.jpg" alt="Travel">
+            <h4>Travel Dreams</h4>
+            <p>Türkiye, Konya, and Islamic heritage exploration.</p>
+        </div>
+    </div>
+
+    <!-- Visual List -->
+    <section class="lifestyle-section">
+        <h2>📋 Lifestyle Highlights</h2>
+        <ul class="visual-list">
+            <li>💻 I develop web systems like JanaMas using PHP & MySQL</li>
+            <li>🍛 I review Malaysian food spots with unique flavors</li>
+            <li>🎧 I use AI tools like ChatGPT to improve decision-making</li>
+            <li>✈️ I plan to visit Türkiye for historical inspiration</li>
+        </ul>
+    </section>
+
+    <!-- Fun Fact Box -->
+    <section class="fact-box">
+        <h3>💡 Fun Tech Facts</h3>
+        <div class="fact-container">
+            <p id="funFact">Loading...</p>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h3>🎥 Watch This:
+            AI Dalam Kehidupan Seharian - Ceramah untuk Cyber Security Malaysia.</h3>
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-zTMC7o2wX8?si=slcDFW15WaMUXx2i" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Poll -->
+    <section class="interactive">
+        <h2>💬 What Lifestyle Topic Do You Enjoy Most?</h2>
+        <form id="pollForm">
+            <div class="poll-option">
+                <input type="radio" id="tech" name="topic" value="Tech">
+                <label for="tech">💻 Tech Life</label>
+            </div>
+            <div class="poll-option">
+                <input type="radio" id="food" name="topic" value="Food">
+                <label for="food">🍜 Food</label>
+            </div>
+            <div class="poll-option">
+                <input type="radio" id="travel" name="topic" value="Travel">
+                <label for="travel">✈️ Travel</label>
+            </div>
+            <br>
+            <button type="button" onclick="submitPoll()">✅ Submit Vote</button>
+        </form>
+
+        <div id="pollResult" class="poll-result-container" style="display:none;">
+            <h3>📊 Live Results</h3>
+
+            <div class="poll-bar-container">
+                <div class="bar-label">💻 Tech Life <span id="techPercent">0%</span></div>
+                <div class="poll-bar"><div id="techBar" class="fill-bar"></div></div>
+            </div>
+
+            <div class="poll-bar-container">
+                <div class="bar-label">🍜 Food <span id="foodPercent">0%</span></div>
+                <div class="poll-bar"><div id="foodBar" class="fill-bar"></div></div>
+            </div>
+
+            <div class="poll-bar-container">
+                <div class="bar-label">✈️ Travel <span id="travelPercent">0%</span></div>
+                <div class="poll-bar"><div id="travelBar" class="fill-bar"></div></div>
+            </div>
+
+            <p class="feedback" id="pollFeedback"></p>
+        </div>
+    </section>
+
+    <!-- Lifestyle Topic Cards -->
+    <section class="lifestyle-section">
+        <h2>📚 Explore Lifestyle Topics</h2>
+        <p style="text-align:center;">Click a card below to view more details about each lifestyle category.</p>
+
+        <div class="topic-grid">
+            <div class="topic-card" onclick="toggleDetail('foodDetail')">
+                <h3>🍛 Food</h3>
+                <p>Discover recipes and local food reviews</p>
+            </div>
+            <div id="foodDetail" class="topic-detail">
+                <ul>
+                    <li>🍽️ Recipes for students: Easy Nasi Goreng Kampung, Sambal Hijau, and more</li>
+                    <li>📸 Food photography tips using your phone</li>
+                    <li>📝 Restaurant reviews around Perlis or your hometown</li>
+                    <li>🎥 Create TikTok food review videos</li>
+                </ul>
+            </div>
+
+            <div class="topic-card" onclick="toggleDetail('travelDetail')">
+                <h3>✈️ Travel</h3>
+                <p>Explore Islamic destinations and local culture</p>
+            </div>
+            <div id="travelDetail" class="topic-detail">
+                <ul>
+                    <li>🕌 Places like Istanbul, Konya, Al-Aqsa Mosque</li>
+                    <li>🎒 Packing lists & budget travel tips</li>
+                    <li>📖 Personal travel blog stories</li>
+                    <li>📍 Google Maps and vlog embeds</li>
+                </ul>
+            </div>
+
+            <div class="topic-card" onclick="toggleDetail('fashionDetail')">
+                <h3>👗 Fashion</h3>
+                <p>Modest fashion and campus outfit ideas</p>
+            </div>
+            <div id="fashionDetail" class="topic-detail">
+                <ul>
+                    <li>🧕 Modest outfit ideas for Raya or SUKSIS events</li>
+                    <li>🛍️ Shopee hauls & student budget tips</li>
+                    <li>📸 Upload lookbooks or outfit rating polls</li>
+                </ul>
+            </div>
+
+            <div class="topic-card" onclick="toggleDetail('mentalDetail')">
+                <h3>🧠 Mental Health</h3>
+                <p>Tips and tools for self-care and reflection</p>
+            </div>
+            <div id="mentalDetail" class="topic-detail">
+                <ul>
+                    <li>📔 Daily journaling & affirmations</li>
+                    <li>🎧 Calming playlists and breathing apps</li>
+                    <li>📱 Promote balance for final-year students</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="social-links">
+        <h2>📲 Let's Connect!</h2>
+        <a href="https://www.instagram.com/mu4z.____/#" target="_blank">
+            <img src="../images/Instagram_icon.png.webp" alt="Instagram" width="30">Instagram
+        </a>
+        |
+        <a href="https://www.tiktok.com/@muazester" target="_blank">
+            <img src="../images/Tiktok_icon.svg.png" alt="TikTok" width="30">TikTok
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Muazzam Bin Ester | UUM E-Portfolio</p>
+</footer>
+
+<!-- JS: Poll -->
+<script>
+    function submitPoll() {
+        const options = document.getElementsByName("topic");
+        let selected = "";
+        for (const option of options) {
+            if (option.checked) {
+                selected = option.value;
+                break;
+            }
+        }
+
+        if (!selected) {
+            alert("⚠️ Please select a topic before submitting.");
+            return;
+        }
+
+        const results = {
+            Tech: { tech: 65, food: 20, travel: 15, feedback: "💻 You're a future innovator!" },
+            Food: { tech: 20, food: 65, travel: 15, feedback: "🍜 You're a foodie with great taste!" },
+            Travel: { tech: 15, food: 30, travel: 55, feedback: "✈️ You love to explore the world!" }
+        };
+
+        const { tech, food, travel, feedback } = results[selected];
+        document.getElementById("pollResult").style.display = "block";
+        document.getElementById("techBar").style.width = tech + "%";
+        document.getElementById("foodBar").style.width = food + "%";
+        document.getElementById("travelBar").style.width = travel + "%";
+        document.getElementById("techPercent").textContent = tech + "%";
+        document.getElementById("foodPercent").textContent = food + "%";
+        document.getElementById("travelPercent").textContent = travel + "%";
+        document.getElementById("pollFeedback").textContent = feedback;
+    }
+</script>
+
+<!-- JS: Fun Fact Rotation -->
+<script>
+    const facts = [
+        "💡 The first computer virus was created in 1986 — and it came from Pakistan!",
+        "🧠 'Bug' in computing came from a real moth stuck in a Harvard machine in 1947.",
+        "🚀 The Apollo 11 computer had less power than a modern calculator!",
+        "👾 The first email was sent by Ray Tomlinson in 1971 — and he used the @ symbol.",
+        "📱 There are more mobile phones in the world than people.",
+        "🎮 The first video game was created in 1958 and was called 'Tennis for Two'.",
+        "🤖 AI like ChatGPT is based on a transformer model — not a robot!"
+    ];
+
+    let factIndex = 0;
+
+    function rotateFacts() {
+        const factElement = document.getElementById("funFact");
+        factElement.classList.remove("fade-in");
+        setTimeout(() => {
+            factElement.textContent = facts[factIndex];
+            factElement.classList.add("fade-in");
+            factIndex = (factIndex + 1) % facts.length;
+        }, 300);
+    }
+
+    setInterval(rotateFacts, 4000);
+    window.onload = rotateFacts;
+</script>
+
+<!-- JS: Toggle Detail -->
+<script>
+    function toggleDetail(id) {
+        const detail = document.getElementById(id);
+        detail.style.display = (detail.style.display === "block") ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>
