@@ -13,8 +13,9 @@ This site includes:
 
 - HTML5, CSS3
 - JavaScript
+- Youtube Embed
 - Google Calendar Embed
-- GitHub Pages (for hosting)
+- Google Maps Embed
 
 ## 🎯 Purpose
 
